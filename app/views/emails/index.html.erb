@@ -1,16 +1,7 @@
-<h1>GMAIL DU TURFU#index</h1>
-<ul id="email-list">
-  <% @emails.each do |email| %>
-    <li>"<%= email.sender %>" by <b><%= email.text  %></b></li>
-  <% end %>
-</ul>
-<%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
-    <label for="sender">Sender
-    <%= text_field_tag  :sender %>
+<h1>GMAIL DU TURfu <h1>
+<p></p>
 
-    <label for="text">text
-    <%= text_field_tag  :text %>
+  <%= button_to 'New', {:controller => "emails", :action => "create"} , :method=>:post %>
 
-    <%= submit_tag 'create', :name => 'commit'%>
-  <% end %>
-</div>
+
+<%= render 'emaildisplay'  %>

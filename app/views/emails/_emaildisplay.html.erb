@@ -1,0 +1,15 @@
+<table class="table">
+    <thead>
+      <tr>
+     </tr>
+    </thead>
+    <tbody>
+  <% @emails.each do |email| %>
+      <th scope="row"></th>
+      <td><%= email.sender %></td>
+      <td><%= email.text %></td>
+      <td><%= button_to 'delete', {} %></td>
+      <td><%= button_to 'Read', {} %></td>
+    </tbody>
+  <% end %>
+</table>
